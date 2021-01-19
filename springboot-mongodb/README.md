@@ -21,7 +21,7 @@
     
 # Deploy application with run command:
     docker run --name mymongodb -p 27017:27017 -d mongo
-    docker run --name springboot-mongodb --link mymongodb:mymongodb -p 8080:8080 -d naresh240/springboot-mongodb:latest
+    docker run --name springboot-mongodb --link mymongodb:mymongodb -p 8080:8080 -d cloudtechmasters/springboot-mongodb:latest
 # Use postman app and Add Employee data
 Check API: /addEmployee
 
