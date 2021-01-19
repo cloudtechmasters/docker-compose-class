@@ -8,7 +8,7 @@ Pre-requisites:
   - Install Docker-compose
  
 # Clone Springboot-mongodb application:
-    git clone https://github.com/Naresh240/docker-compose-class.git
+    git clone https://github.com/cloudtechmasters/docker-compose-class.git
 
 Goto springboot-mongodb directory
     
@@ -17,11 +17,11 @@ Goto springboot-mongodb directory
     mvn clean install -DskipTests=true
  
 # Build Docker Image
-    docker build -t naresh240/spring-boot-docker-postgresql:latest .
+    docker build -t cloudtechmasters/spring-boot-docker-postgresql:latest .
 # Docker login
-    docker login -u naresh240 -p
+    docker login -u cloudtechmasters -p
 # Push Docker image to Dockerhub
-    docker push naresh240/spring-boot-docker-postgresql:latest
+    docker push cloudtechmasters/spring-boot-docker-postgresql:latest
 # Deploy application with run command:
     docker run --name spring-boot-postgres -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=docker -d postgres
     docker run --name spring-boot-docker-postgresql --link spring-boot-postgres:postgres -p 8080:8080 -d naresh240/spring-boot-docker-postgresql
