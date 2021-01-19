@@ -7,17 +7,17 @@
   - Install Docker-compose
  
 # Clone Springboot-mongodb application:
-    git clone https://github.com/Naresh240/docker.git
+    git clone https://github.com/cloudtechmasters/docker.git
     cd docker/springboot-mongodb-dockercompose
 # Build artifact
     mvn clean install -DskipTests=true
  
 # Build Docker Image
-    docker build -t naresh240/springboot-mongodb:latest .
+    docker build -t cloudtechmasters/springboot-mongodb:latest .
 # Docker login
-    docker login -u naresh240 -p
+    docker login -u cloudtechmasters -p
 # Push Docker image to Dockerhub
-    docker push naresh240/springboot-mongodb:latest
+    docker push cloudtechmasters/springboot-mongodb:latest
     
 # Deploy application with run command:
     docker run --name mymongodb -p 27017:27017 -d mongo
@@ -29,7 +29,7 @@ Check API: /addEmployee
   
 In postman app keep Post method and give Json data by selecting Body --> raw (Json format)
 
-    {"id": "1001", "name": "Naresh", "departement": "Engineer"}
+    {"id": "1001", "name": "cloudtechmasters", "departement": "Engineer"}
     
 Check API:- /findAllEmployees
 
@@ -50,7 +50,7 @@ Check API: /addEmployee
   
 In postman app keep Post method and give Json data by selecting Body --> raw (Json format)
 
-    {"id": "1001", "name": "Naresh", "departement": "Engineer"}
+    {"id": "1001", "name": "cloudtechmasters", "departement": "Engineer"}
     
 Check API:- /findAllEmployees
 
