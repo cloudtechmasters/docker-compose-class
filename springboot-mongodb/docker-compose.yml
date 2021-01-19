@@ -6,7 +6,7 @@ services:
     ports:
      - 27017:27017
   springboot-mongodb:
-    image: naresh240/springboot-mongodb:1.0
+    image: cloudtechmasters/springboot-mongodb:1.0
     container_name: springboot-mongodb
     ports:
       - 8080:8080
