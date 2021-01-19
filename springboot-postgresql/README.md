@@ -12,19 +12,19 @@ Pre-requisites:
 
 Goto springboot-mongodb directory
     
-    cd docker-compose-class/spring-boot-postgresql
+    cd docker-compose-class/springboot-postgresql
 # Build artifact
     mvn clean install -DskipTests=true
  
 # Build Docker Image
-    docker build -t cloudtechmasters/spring-boot-docker-postgresql:latest .
+    docker build -t cloudtechmasters/springboot-docker-postgresql:latest .
 # Docker login
     docker login -u cloudtechmasters -p
 # Push Docker image to Dockerhub
-    docker push cloudtechmasters/spring-boot-docker-postgresql:latest
+    docker push cloudtechmasters/springboot-docker-postgresql:latest
 # Deploy application with run command:
     docker run --name spring-boot-postgres -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=docker -d postgres
-    docker run --name spring-boot-docker-postgresql --link spring-boot-postgres:postgres -p 8080:8080 -d cloudtechmasters/spring-boot-docker-postgresql
+    docker run --name spring-boot-docker-postgresql --link spring-boot-postgres:postgres -p 8080:8080 -d cloudtechmasters/springboot-docker-postgresql
 # Goto Web UI and check below link
     http://<ip-address>:8080/accounts
 # CleanUP
