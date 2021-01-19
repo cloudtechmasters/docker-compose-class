@@ -14,7 +14,7 @@ services:
       - POSTGRES_DB=docker
   spring-boot-postgresql:
     restart: always
-    image: naresh240/spring-boot-docker-postgresql
+    image: cloudtechmasters/spring-boot-docker-postgresql
     container_name: spring-boot-postgresql
     ports:
       - 8080:8080
