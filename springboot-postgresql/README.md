@@ -24,7 +24,7 @@ Goto springboot-mongodb directory
     docker push cloudtechmasters/spring-boot-docker-postgresql:latest
 # Deploy application with run command:
     docker run --name spring-boot-postgres -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=docker -d postgres
-    docker run --name spring-boot-docker-postgresql --link spring-boot-postgres:postgres -p 8080:8080 -d naresh240/spring-boot-docker-postgresql
+    docker run --name spring-boot-docker-postgresql --link spring-boot-postgres:postgres -p 8080:8080 -d cloudtechmasters/spring-boot-docker-postgresql
 # Goto Web UI and check below link
     http://<ip-address>:8080/accounts
 # CleanUP
